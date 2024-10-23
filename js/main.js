@@ -210,9 +210,13 @@ function contadorTiempo() {
         mConteo.innerText = `Tiempo de juego: ${cont} seg`;
         if (acierto == 8) {
             Swal.fire({
-                position: "center",
+                position: "top",
                 icon: "success",
                 title: "Felicidades, Haz ganado el Juego!",
+                showConfirmButton: true,
+  customClass: {
+    popup: 'swal2-custom-popup'
+  }
             });
             var aux = cont;
             tiempoJuego(aux);
